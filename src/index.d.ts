@@ -94,4 +94,4 @@ export interface FlexBoxProps {
     dateTime?: string;
     noShrinkWrap?: boolean;
 }
-export class FlexBox extends React.Component<FlexBoxProps, any> {}
+export const FlexBox: (props: FlexBoxProps) => React.DetailedReactHTMLElement<FlexBoxProps, HTMLElement>;

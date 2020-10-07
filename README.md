@@ -1,11 +1,11 @@
-# WS React Flex Layout
+# RG React Flex Layout
 
 Компоненты, для flex вёрстки
 
 ## Установка
 
 ```shell
-npm install ws-react-flex-layout@latest --save
+npm install rg-react-flex-layout@latest --save
 ```
 
 ## Использование
@@ -31,11 +31,11 @@ npm install ws-react-flex-layout@latest --save
 Третий дочерний элемент содержит свойство **grow** со значением **1**, устанавливающее значение свойства **flex-grow** равным **1**.
 И наконец последний элемент списка содержит свойство **shrink** в значении **2**, задающее свойство **flex-shrink** равное **2**.
 
-    <ul class="ws-layout-row-wrap ws-align-items-space-between-center item-list">
-        <li class="ws-align-self-end">item 1</li>
+    <ul class="rg-layout-row-wrap rg-align-items-space-between-center item-list">
+        <li class="rg-align-self-end">item 1</li>
         <li id="item-2">item 2</li>
-        <li class="ws-flex-grow-1">item 3</li>
-        <li class="ws-flex-shrink-2">item 1</li>
+        <li class="rg-flex-grow-1">item 3</li>
+        <li class="rg-flex-shrink-2">item 1</li>
     </ul>
 
 В результате преобразования все элементы в получили один или несколько атрибутов классов, за исключением второго элемента списка, получившего атрибут id. Большинство свойств передаваемых компоненту в результате добавляют определенный scc-класс создаваемому DOM-узлу.
@@ -46,14 +46,14 @@ npm install ws-react-flex-layout@latest --save
 
 Для определения значений направления главной и поперечной осей flex-контейнера используются свойства приведенные ниже, каждое свойство задает компоненту свой css-класс:
 
-* **row** - ws-layout-row
-* **rowWrap** - ws-layout-row-wrap
-* **rowRev** - ws-layout-row-reverse
-* **rowWrapRev** - ws-layout-row-wrap-reverse
-* **column** - ws-layout-column
-* **columnWrap** - ws-layout-column-wrap
-* **columnRev** - ws-layout-column-reverse
-* **columnWrapRev** - ws-layout-column-wrap-reverse
+* **row** - rg-layout-row
+* **rowWrap** - rg-layout-row-wrap
+* **rowRev** - rg-layout-row-reverse
+* **rowWrapRev** - rg-layout-row-wrap-reverse
+* **column** - rg-layout-column
+* **columnWrap** - rg-layout-column-wrap
+* **columnRev** - rg-layout-column-reverse
+* **columnWrapRev** - rg-layout-column-wrap-reverse
 
 Значения данных свойств, разделенные символом пробела, определяют распределение flex-элементов по осям контейнера. Первое значение распределяет элементы по главной оси, второе по поперечной.
 
@@ -61,15 +61,15 @@ npm install ws-react-flex-layout@latest --save
 
 Результат преобразования вместе с описанием полученных css-классов представлен ниже
 
-    <div class="ws-layout-column-wrap ws-align-items-space-between-baseline"></div>
+    <div class="rg-layout-column-wrap rg-align-items-space-between-baseline"></div>
 
-    .ws-layout-column-wrap {
+    .rg-layout-column-wrap {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
     }
 
-    .ws-align-items-space-between-baseline {
+    .rg-align-items-space-between-baseline {
       justify-content: space-between;
       align-items: baseline;
     }
@@ -84,45 +84,45 @@ npm install ws-react-flex-layout@latest --save
 
 Для позиционирования элементов в описанные выше свойства передаются значения отвечающие за размещение элементов вдоль главной и поперечной осей. Полный список данных значений, сокращений и создаваемых ими css-классов приведен ниже
 
-* **start start** / **start** - ws-align-items-start-start
-* **start center** / **start ctr** - ws-align-items-start-center
-* **start baseline** / **start bl** - ws-align-items-start-baseline
-* **start stretch** - ws-align-items-start-stretch
-* **start end** - ws-align-items-start-end
-* **space-between start** / **sb start** - ws-align-items-space-between-start
-* **space-between center** / **sb ctr** - ws-align-items-space-between-center
-* **space-between baseline** / **sb bl** - ws-align-items-space-between-baseline
-* **space-between stretch** / **sb stretch** - ws-align-items-space-between-stretch
-* **space-between end** / **sb end** - ws-align-items-space-between-end
-* **center start** / **ctr start** - ws-align-items-center-start
-* **center center** / **ctr** - ws-align-items-center-center
-* **center baseline** / **ctr bl** - ws-align-items-center-baseline
-* **center stretch** / **ctr stretch** - ws-align-items-center-stretch
-* **center end** / **ctr end** - ws-align-items-center-end
-* **stretch start** - ws-align-items-stretch-start
-* **stretch center** / **stretch ctr** - ws-align-items-stretch-center
-* **stretch baseline** / **stretch bl** - ws-align-items-stretch-baseline
-* **stretch stretch** / **stretch** - ws-align-items-stretch
-* **stretch end** - ws-align-items-stretch-end
-* **space-around start** / **sa start** - ws-align-items-space-around-start
-* **space-around center** / **sa ctr** - ws-align-items-space-around-center
-* **space-around baseline** / **sa bl** - ws-align-items-space-around-baseline
-* **space-around stretch** / **sa stretch** - ws-align-items-space-around-stretch
-* **space-around end** / **sa end** - ws-align-items-space-around-end
-* **end start** - ws-align-items-end-start
-* **end center** / **end ctr** - ws-align-items-end-center
-* **end baseline** / **end bl** - ws-align-items-end-baseline
-* **end stretch** - ws-align-items-end-stretch
-* **end end** / **end** - ws-align-items-end-end
+* **start start** / **start** - rg-align-items-start-start
+* **start center** / **start ctr** - rg-align-items-start-center
+* **start baseline** / **start bl** - rg-align-items-start-baseline
+* **start stretch** - rg-align-items-start-stretch
+* **start end** - rg-align-items-start-end
+* **space-between start** / **sb start** - rg-align-items-space-between-start
+* **space-between center** / **sb ctr** - rg-align-items-space-between-center
+* **space-between baseline** / **sb bl** - rg-align-items-space-between-baseline
+* **space-between stretch** / **sb stretch** - rg-align-items-space-between-stretch
+* **space-between end** / **sb end** - rg-align-items-space-between-end
+* **center start** / **ctr start** - rg-align-items-center-start
+* **center center** / **ctr** - rg-align-items-center-center
+* **center baseline** / **ctr bl** - rg-align-items-center-baseline
+* **center stretch** / **ctr stretch** - rg-align-items-center-stretch
+* **center end** / **ctr end** - rg-align-items-center-end
+* **stretch start** - rg-align-items-stretch-start
+* **stretch center** / **stretch ctr** - rg-align-items-stretch-center
+* **stretch baseline** / **stretch bl** - rg-align-items-stretch-baseline
+* **stretch stretch** / **stretch** - rg-align-items-stretch
+* **stretch end** - rg-align-items-stretch-end
+* **space-around start** / **sa start** - rg-align-items-space-around-start
+* **space-around center** / **sa ctr** - rg-align-items-space-around-center
+* **space-around baseline** / **sa bl** - rg-align-items-space-around-baseline
+* **space-around stretch** / **sa stretch** - rg-align-items-space-around-stretch
+* **space-around end** / **sa end** - rg-align-items-space-around-end
+* **end start** - rg-align-items-end-start
+* **end center** / **end ctr** - rg-align-items-end-center
+* **end baseline** / **end bl** - rg-align-items-end-baseline
+* **end stretch** - rg-align-items-end-stretch
+* **end end** / **end** - rg-align-items-end-end
 
 ### Индивидуальное позиционирование - свойство alignSelf
 Для индивидуального размещения элемента вдоль поперечной оси используется свойство **alignSelf**. Данное свойство необязательное и применяется к элементу flex-контейнера. Полный список значений, сокращенных значений и создаваемых классов представлен ниже
 
-* **start** - ws-align-self-start
-* **baseline** / **bl** - ws-align-self-baseline
-* **center** / **ctr** - ws-align-self-center
-* **stretch** - ws-align-self-stretch
-* **end** - ws-align-self-end
+* **start** - rg-align-self-start
+* **baseline** / **bl** - rg-align-self-baseline
+* **center** / **ctr** - rg-align-self-center
+* **stretch** - rg-align-self-stretch
+* **end** - rg-align-self-end
 
 ### Позиционирование строк из элементов контейнера - свойство contentAlign
 
@@ -130,9 +130,9 @@ npm install ws-react-flex-layout@latest --save
 
     <FlexBox columnWrap="space-between baseline"></FlexBox>
 
-    <div class="ws-layout-column-wrap ws-align-items-space-between-baseline"></div>
+    <div class="rg-layout-column-wrap rg-align-items-space-between-baseline"></div>
 
-    .ws-align-items-space-between-baseline {
+    .rg-align-items-space-between-baseline {
       justify-content: space-between;
       align-items: baseline;
     }
@@ -141,9 +141,9 @@ npm install ws-react-flex-layout@latest --save
 
     <FlexBox columnWrap="space-between center" contentAlign={true}></FlexBox>
 
-    <div class="ws-layout-column-wrap ws-align-content-space-between-center"></div>
+    <div class="rg-layout-column-wrap rg-align-content-space-between-center"></div>
 
-    .ws-align-items-space-between-baseline {
+    .rg-align-items-space-between-baseline {
       justify-content: space-between;
       align-content: center;
     }
@@ -152,52 +152,52 @@ npm install ws-react-flex-layout@latest --save
 
 Полный список значений, используемых в связке со свойством **contentAlign**, их сокращенных значений, а также создаваемых css-классов представлен ниже
 
-* **start start** / **start** - ws-align-content-start
-* **start space-between** / **start sb** - ws-align-content-start-space-between
-* **start center** / **start ctr** - ws-align-content-start-center
-* **start space-around** / **start sa** - ws-align-content-start-space-around
-* **start stretch** - ws-align-content-start-stretch
-* **start end** - ws-align-content-start-end
-* **space-between start** / **sb start** - ws-align-content-space-between-start
-* **space-between space-between** / **sb** - ws-align-content-space-between
-* **space-between center** / **sb center** - ws-align-content-space-between-center
-* **space-between space-around** / **sb sa** - ws-align-content-space-between-space-around
-* **space-between stretch** / **sb stretch** - ws-align-content-space-between-stretch
-* **space-between end** / **sb end** - ws-align-content-space-between-end
-* **center start** / **ctr start** - ws-align-content-center-start
-* **center space-between** / **ctr sb** - ws-align-content-center-space-between
-* **center center** / **ctr** - ws-align-content-center
-* **center space-around** / **ctr sa** - ws-align-content-center-space-around
-* **center stretch** / **ctr stretch** - ws-align-content-center-stretch
-* **center end** / **ctr end** - ws-align-content-center-end
-* **stretch start** - ws-align-content-stretch-start
-* **stretch space-between** / **stretch sb** - ws-align-content-stretch-space-between
-* **stretch center** / **stretch ctr** - ws-align-content-stretch-center
-* **stretch space-around** / **stretch sa** - ws-align-content-stretch-space-around
-* **stretch stretch** / **stretch** - ws-align-content-stretch
-* **stretch end** - ws-align-content-stretch-end
-* **space-around start** / **sa start** - ws-align-content-space-around-start
-* **space-around space-between** / **sa sb** - ws-align-content-space-around-space-between
-* **space-around center** / **sa ctr** - ws-align-content-space-around-center
-* **space-around space-around** / **sa** - ws-align-content-space-around
-* **space-around stretch** / **sa stretch** - ws-align-content-space-around-stretch
-* **space-around end** / **sa end** - ws-align-content-space-around-end
-* **end start** - ws-align-content-end-start
-* **end space-between** / **end sb** - ws-align-content-end-space-between
-* **end center** / **end ctr** - ws-align-content-end-center
-* **end space-around** / **end sa** - ws-align-content-end-space-around
-* **end stretch** - ws-align-content-end-stretch
-* **end end** / **end** - ws-align-content-end
+* **start start** / **start** - rg-align-content-start
+* **start space-between** / **start sb** - rg-align-content-start-space-between
+* **start center** / **start ctr** - rg-align-content-start-center
+* **start space-around** / **start sa** - rg-align-content-start-space-around
+* **start stretch** - rg-align-content-start-stretch
+* **start end** - rg-align-content-start-end
+* **space-between start** / **sb start** - rg-align-content-space-between-start
+* **space-between space-between** / **sb** - rg-align-content-space-between
+* **space-between center** / **sb center** - rg-align-content-space-between-center
+* **space-between space-around** / **sb sa** - rg-align-content-space-between-space-around
+* **space-between stretch** / **sb stretch** - rg-align-content-space-between-stretch
+* **space-between end** / **sb end** - rg-align-content-space-between-end
+* **center start** / **ctr start** - rg-align-content-center-start
+* **center space-between** / **ctr sb** - rg-align-content-center-space-between
+* **center center** / **ctr** - rg-align-content-center
+* **center space-around** / **ctr sa** - rg-align-content-center-space-around
+* **center stretch** / **ctr stretch** - rg-align-content-center-stretch
+* **center end** / **ctr end** - rg-align-content-center-end
+* **stretch start** - rg-align-content-stretch-start
+* **stretch space-between** / **stretch sb** - rg-align-content-stretch-space-between
+* **stretch center** / **stretch ctr** - rg-align-content-stretch-center
+* **stretch space-around** / **stretch sa** - rg-align-content-stretch-space-around
+* **stretch stretch** / **stretch** - rg-align-content-stretch
+* **stretch end** - rg-align-content-stretch-end
+* **space-around start** / **sa start** - rg-align-content-space-around-start
+* **space-around space-between** / **sa sb** - rg-align-content-space-around-space-between
+* **space-around center** / **sa ctr** - rg-align-content-space-around-center
+* **space-around space-around** / **sa** - rg-align-content-space-around
+* **space-around stretch** / **sa stretch** - rg-align-content-space-around-stretch
+* **space-around end** / **sa end** - rg-align-content-space-around-end
+* **end start** - rg-align-content-end-start
+* **end space-between** / **end sb** - rg-align-content-end-space-between
+* **end center** / **end ctr** - rg-align-content-end-center
+* **end space-around** / **end sa** - rg-align-content-end-space-around
+* **end stretch** - rg-align-content-end-stretch
+* **end end** / **end** - rg-align-content-end
 
 ### Свойства grow и shrink
 
-Свойства **grow** и **shrink**, применяемые к элементам flex-контейнера, создают классы **ws-flex-grow-#** и **ws-flex-shrink-#** соответственно, где **#** - значение в диапазоне от 0 до 12 включительно. 
+Свойства **grow** и **shrink**, применяемые к элементам flex-контейнера, создают классы **rg-flex-grow-#** и **rg-flex-shrink-#** соответственно, где **#** - значение в диапазоне от 0 до 12 включительно. 
 
     <FlexBox grow="1" shrink="0">item</FlexBox>
 
 Пример, описанный выше в результате будет преобразован в следующий html-код 
 
-    <div class="ws-flex-grow-1 ws-flex-shrink-0">item</div>
+    <div class="rg-flex-grow-1 rg-flex-shrink-0">item</div>
 
 ### Остальные свойства компонента
 

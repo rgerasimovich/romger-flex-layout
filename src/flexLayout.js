@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import DIRECTION from './config/direction';
 import ITEMS_ALIGNMENT from './config/itemsAlignment';
 import CONTENT_ALIGNMENT from './config/contentAlignment';
@@ -7,130 +7,120 @@ import GROW from './config/growClasses';
 import SHRINK from './config/shrinkClasses';
 import './index.min.css';
 
-export class FlexBox extends React.Component {
-    constructor(props) {
-        super(props);
-        this.DEFAULT_DOM_NODE = 'div';
-        this.directionKeys = Object.values(DIRECTION).map(item => item.value),
-        this.itemsAlignments = Object.values(ITEMS_ALIGNMENT),
-        this.contentAlignments = Object.values(CONTENT_ALIGNMENT),
-        this.selfAlignments = Object.values(SELF_ALIGNMENT),
-        this.growClasses = Object.values(GROW),
-        this.shrinkClasses = Object.values(SHRINK);
-        this.classList = [];
-        this.align = '';
-        this.state = {
-            classList: [],
-            props: {}
-        };
-    }
+export const FLexBox = (props) => {
+    const [childClassList, setChildClassList] = useState([]);
+    const [childProps, setChildProps] = useState([]);
+    let DEFAULT_DOM_NODE = 'div';
+    let directionKeys = Object.values(DIRECTION).map(item => item.value);
+    let itemsAlignments = Object.values(ITEMS_ALIGNMENT);
+    let contentAlignments = Object.values(CONTENT_ALIGNMENT);
+    let selfAlignments = Object.values(SELF_ALIGNMENT);
+    let growClasses = Object.values(GROW);
+    let shrinkClasses = Object.values(SHRINK);
+    let classList = [];
+    let align = '';
 
-    componentWillMount() {
-        this.buildComponentClassList();
-    }
-
-    componentWillReceiveProps() {
-        this.buildComponentClassList();
-    }
+    useEffect(() => {
+        buildComponentClassList();
+    }, [props]);
 
     /**
      * Ищем нужный класс и добавляем его в общий массив
      * @param {array} source 
      * @param {string} searchParam 
      */
-    getReqClassName(source, searchParam) {
+    const getReqClassName = (source, searchParam) => {
         source.forEach(item => {
             if (searchParam === item.value || searchParam === item.shortValue) {
-                this.classList.push(item.class);
+                classList.push(item.class);
             }
         });
-    }
+    };
 
     /**
      * Построение списка классов компоненте
      */
-    buildComponentClassList() {
-        this.classList = [];
-        this.directionKeys.forEach(key => {
-            if (this.props.hasOwnProperty(key)) {
-                this.align = this.props[key];
-                this.classList.push(DIRECTION[key].class);
+    const buildComponentClassList = () => {
+        classList = [];
+        directionKeys.forEach(key => {
+            if (props.hasOwnProperty(key)) {
+                align = props[key];
+                classList.push(DIRECTION[key].class);
             }
         });
 
-        if (this.props.contentAlign === true) {
-            this.getReqClassName(this.contentAlignments, this.align);
+        if (props.contentAlign === true) {
+            getReqClassName(contentAlignments, align);
         } 
         else {
-            this.getReqClassName(this.itemsAlignments, this.align);
+            getReqClassName(itemsAlignments, align);
         }
 
-        if (this.props.alignSelf) {
-            this.getReqClassName(this.selfAlignments, this.props.alignSelf);
+        if (props.alignSelf) {
+            getReqClassName(selfAlignments, props.alignSelf);
         }
 
-        if (this.props.grow || this.props.grow === '0') {
-            this.getReqClassName(this.growClasses, this.props.grow);
+        if (props.grow || props.grow === '0') {
+            getReqClassName(growClasses, props.grow);
         }
 
-        if (this.props.shrink || this.props.shrink === '0') {
-            this.getReqClassName(this.shrinkClasses, this.props.shrink);
+        if (props.shrink || props.shrink === '0') {
+            getReqClassName(shrinkClasses, props.shrink);
         }
 
-        if (this.props.flex) {
-            this.classList.push(GROW.grow1.class);
+        if (props.flex) {
+            classList.push(GROW.grow1.class);
         }
 
-        let props = {};
+        let newChildProps = {};
 
-        if (this.props.href) {
-            props.href = this.props.href;
+        if (props.href) {
+            newChildProps.href = props.href;
         }
 
-        if (this.props.target) {
-            props.target = this.props.target;
+        if (props.target) {
+            newChildProps.target = props.target;
         }
 
-        if (this.props.rel) {
-            props.rel = this.props.rel;
+        if (props.rel) {
+            newChildProps.rel = props.rel;
         }
 
-        if (this.props.dateTime) {
-            props.dateTime = this.props.dateTime;
+        if (props.dateTime) {
+            newChildProps.dateTime = props.dateTime;
         }
 
-        if (this.props.styleName) {
-            props.styleName = this.props.styleName;
+        if (props.styleName) {
+            newChildProps.styleName = props.styleName;
         }
 
-        this.setState({ classList: this.classList, props: props });
-    }
+        setChildClassList(classList);
+        setChildProps(newChildProps);
+    };
 
     /**
      * Изменяем пропсы детей, если надо
      * @param {*} children 
      */
-    changeChildren(children) {
-        if (!this.props.noShrinkWrap) {
+    const changeChildren = (children) => {
+        if (!props.noShrinkWrap) {
             return children;
         }
         return React.Children.map(children, child => React.cloneElement(child, { shrink: (child.props.shrink || child.props.shrink === '0') ? child.props.shrink : '0' }));
-    }
+    };
 
-    render() {
-        const node = this.props.node ? this.props.node : this.DEFAULT_DOM_NODE;
+    const node = props.node ? props.node : DEFAULT_DOM_NODE;
 
-        return (
-            React.createElement(node, {
-                ...this.state.props,
-                onClick: this.props.onClick,
-                className: this.props.className ? `${this.state.classList.join(' ')} ${this.props.className}` : this.state.classList.join(' '),
-                style: this.props.style,
-                id: this.props.id,
-                ['data-template']: this.props.dataTemplate,
-            }, this.changeChildren(this.props.children))
-        );
-    }
-}
+    return (
+        React.createElement(node, {
+            ...childProps,
+            onClick: props.onClick,
+            className: props.className ? `${childClassList.join(' ')} ${props.className}` : childClassList.join(' '),
+            style: props.style,
+            id: props.id,
+            ['data-template']: props.dataTemplate,
+        }, changeChildren(props.children))
+    );
+};
 
-export default FlexBox;
+export default FLexBox;

@@ -1,6 +1,6 @@
 {
   "name": "@romger/react-flex-layout",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Romger React Flex Layout",
   "repository": {
     "type": "git",
@@ -36,6 +36,6 @@
     "gulp-uglify": "^3.0.1"
   },
   "dependencies": {
-    "react": "^16.5.1"
+    "react": "16.13.1"
   }
 }
