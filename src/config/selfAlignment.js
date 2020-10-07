@@ -1,25 +1,25 @@
 const SELF_ALIGNMENT = {
     start: {
         value: 'start',
-        class: 'ws-align-self-start'
+        class: 'rg-align-self-start'
     },
     baseline: {
         value: 'baseline',
         shortValue: 'bl',
-        class: 'ws-align-self-baseline'
+        class: 'rg-align-self-baseline'
     },
     center: {
         value: 'center',
         shortValue: 'ctr',
-        class: 'ws-align-self-center'
+        class: 'rg-align-self-center'
     },
     stretch: {
         value: 'stretch',
-        class: 'ws-align-self-stretch'
+        class: 'rg-align-self-stretch'
     },
     end: {
         value: 'end',
-        class: 'ws-align-self-end'
+        class: 'rg-align-self-end'
     },
 };
 

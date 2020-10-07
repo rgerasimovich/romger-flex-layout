@@ -12,7 +12,7 @@
   @extend %flex-layout;
 }
 
-.ws-layout-row {
+.rg-layout-row {
   @extend %row;
 }
 
@@ -21,7 +21,7 @@
   flex-direction: row-reverse;
 }
 
-.ws-layout-row-reverse {
+.rg-layout-row-reverse {
   @extend %row-reverse;
 }
 
@@ -30,7 +30,7 @@
   @extend %wrap;
 }
 
-.ws-layout-row-wrap {
+.rg-layout-row-wrap {
   @extend %row-wrap;
 }
 
@@ -39,7 +39,7 @@
   @extend %wrap;
 }
 
-.ws-layout-row-wrap-reverse {
+.rg-layout-row-wrap-reverse {
   @extend %row-wrap-reverse;
 }
 
@@ -48,7 +48,7 @@
   flex-direction: column;
 }
 
-.ws-layout-column {
+.rg-layout-column {
   @extend %column;
 }
 
@@ -57,7 +57,7 @@
   flex-direction: column-reverse;
 }
 
-.ws-layout-column-reverse {
+.rg-layout-column-reverse {
   @extend %column-reverse;
 }
 
@@ -66,7 +66,7 @@
   @extend %wrap;
 }
 
-.ws-layout-column-wrap {
+.rg-layout-column-wrap {
   @extend %column-wrap;
 }
 
@@ -75,7 +75,7 @@
   @extend %wrap;
 }
 
-.ws-layout-column-wrap-reverse {
+.rg-layout-column-wrap-reverse {
   @extend %column-wrap-reverse;
 }
 
@@ -149,365 +149,365 @@
 }
 
 // Align items classes
-.ws-align-items-start {
+.rg-align-items-start {
   @extend %justify-content-start;
   @extend %align-items-start;
 }
 
-.ws-align-items-start-center {
+.rg-align-items-start-center {
   @extend %justify-content-start;
   @extend %align-items-center;
 }
 
-.ws-align-items-start-baseline {
+.rg-align-items-start-baseline {
   @extend %justify-content-start;
   @extend %align-items-baseline;
 }
 
-.ws-align-items-start-stretch {
+.rg-align-items-start-stretch {
   @extend %justify-content-start;
   @extend %align-items-stretch;
 }
 
-.ws-align-items-start-end {
+.rg-align-items-start-end {
   @extend %justify-content-start;
   @extend %align-items-end;
 }
 
-.ws-align-items-space-between-start {
+.rg-align-items-space-between-start {
   @extend %justify-content-space-between;
   @extend %align-items-start;
 }
 
-.ws-align-items-space-between-center {
+.rg-align-items-space-between-center {
   @extend %justify-content-space-between;
   @extend %align-items-center;
 }
 
-.ws-align-items-space-between-baseline {
+.rg-align-items-space-between-baseline {
   @extend %justify-content-space-between;
   @extend %align-items-baseline;
 }
 
-.ws-align-items-space-between-stretch {
+.rg-align-items-space-between-stretch {
   @extend %justify-content-space-between;
   @extend %align-items-stretch;
 }
 
-.ws-align-items-space-between-end {
+.rg-align-items-space-between-end {
   @extend %justify-content-space-between;
   @extend %align-items-end;
 }
 
-.ws-align-items-center-start {
+.rg-align-items-center-start {
   @extend %justify-content-center;
   @extend %align-items-start;
 }
 
-.ws-align-items-center {
+.rg-align-items-center {
   @extend %justify-content-center;
   @extend %align-items-center;
 }
 
-.ws-align-items-center-baseline {
+.rg-align-items-center-baseline {
   @extend %justify-content-center;
   @extend %align-items-baseline;
 }
 
-.ws-align-items-center-stretch {
+.rg-align-items-center-stretch {
   @extend %justify-content-center;
   @extend %align-items-stretch;
 }
 
-.ws-align-items-center-end {
+.rg-align-items-center-end {
   @extend %justify-content-center;
   @extend %align-items-end;
 }
 
-.ws-align-items-stretch-start {
+.rg-align-items-stretch-start {
   @extend %justify-content-stretch;
   @extend %align-items-start;
 }
 
-.ws-align-items-stretch-center {
+.rg-align-items-stretch-center {
   @extend %justify-content-stretch;
   @extend %align-items-center;
 }
 
-.ws-align-items-stretch-baseline {
+.rg-align-items-stretch-baseline {
   @extend %justify-content-stretch;
   @extend %align-items-baseline;
 }
 
-.ws-align-items-stretch {
+.rg-align-items-stretch {
   @extend %justify-content-stretch;
   @extend %align-items-stretch;
 }
 
-.ws-align-items-stretch-end {
+.rg-align-items-stretch-end {
   @extend %justify-content-stretch;
   @extend %align-items-end;
 }
 
-.ws-align-items-space-around-start {
+.rg-align-items-space-around-start {
   @extend %justify-content-space-around;
   @extend %align-items-start;
 }
 
-.ws-align-items-space-around-center {
+.rg-align-items-space-around-center {
   @extend %justify-content-space-around;
   @extend %align-items-center;
 }
 
-.ws-align-items-space-around-baseline {
+.rg-align-items-space-around-baseline {
   @extend %justify-content-space-around;
   @extend %align-items-baseline;
 }
 
-.ws-align-items-space-around-stretch {
+.rg-align-items-space-around-stretch {
   @extend %justify-content-space-around;
   @extend %align-items-stretch;
 }
 
-.ws-align-items-space-around-end {
+.rg-align-items-space-around-end {
   @extend %justify-content-space-around;
   @extend %align-items-end;
 }
 
-.ws-align-items-end-start {
+.rg-align-items-end-start {
   @extend %justify-content-end;
   @extend %align-items-start;
 }
 
-.ws-align-items-end-center {
+.rg-align-items-end-center {
   @extend %justify-content-end;
   @extend %align-items-center;
 }
 
-.ws-align-items-end-baseline {
+.rg-align-items-end-baseline {
   @extend %justify-content-end;
   @extend %align-items-baseline;
 }
 
-.ws-align-items-end-stretch {
+.rg-align-items-end-stretch {
   @extend %justify-content-end;
   @extend %align-items-stretch;
 }
 
-.ws-align-items-end {
+.rg-align-items-end {
   @extend %justify-content-end;
   @extend %align-items-end;
 }
 
 // Align content classes
-.ws-align-content-start {
+.rg-align-content-start {
   @extend %justify-content-start;
   @extend %align-content-start;
 }
 
-.ws-align-content-start-space-between {
+.rg-align-content-start-space-between {
   @extend %justify-content-start;
   @extend %align-content-space-between;
 }
 
-.ws-align-content-start-center {
+.rg-align-content-start-center {
   @extend %justify-content-start;
   @extend %align-content-center;
 }
 
-.ws-align-content-start-space-around {
+.rg-align-content-start-space-around {
   @extend %justify-content-start;
   @extend %align-content-space-around;
 }
 
-.ws-align-content-start-stretch {
+.rg-align-content-start-stretch {
   @extend %justify-content-start;
   @extend %align-content-stretch;
 }
 
-.ws-align-content-start-end {
+.rg-align-content-start-end {
   @extend %justify-content-start;
   @extend %align-content-end;
 }
 
-.ws-align-content-space-between-start {
+.rg-align-content-space-between-start {
   @extend %justify-content-space-between;
   @extend %align-content-start;
 }
 
-.ws-align-content-space-between {
+.rg-align-content-space-between {
   @extend %justify-content-space-between;
   @extend %align-content-space-between;
 }
 
-.ws-align-content-space-between-center {
+.rg-align-content-space-between-center {
   @extend %justify-content-space-between;
   @extend %align-content-center;
 }
 
-.ws-align-content-space-between-space-around {
+.rg-align-content-space-between-space-around {
   @extend %justify-content-space-between;
   @extend %align-content-space-around;
 }
 
-.ws-align-content-space-between-stretch {
+.rg-align-content-space-between-stretch {
   @extend %justify-content-space-between;
   @extend %align-content-stretch;
 }
 
-.ws-align-content-space-between-end {
+.rg-align-content-space-between-end {
   @extend %justify-content-space-between;
   @extend %align-content-end;
 }
 
-.ws-align-content-center-start {
+.rg-align-content-center-start {
   @extend %justify-content-center;
   @extend %align-content-start;
 }
 
-.ws-align-content-center-space-between {
+.rg-align-content-center-space-between {
   @extend %justify-content-center;
   @extend %align-content-space-between;
 }
 
-.ws-align-content-center {
+.rg-align-content-center {
   @extend %justify-content-center;
   @extend %align-content-center;
 }
 
-.ws-align-content-center-space-around {
+.rg-align-content-center-space-around {
   @extend %justify-content-center;
   @extend %align-content-space-around;
 }
 
-.ws-align-content-center-stretch {
+.rg-align-content-center-stretch {
   @extend %justify-content-center;
   @extend %align-content-stretch;
 }
 
-.ws-align-content-center-end {
+.rg-align-content-center-end {
   @extend %justify-content-center;
   @extend %align-content-end;
 }
 
-.ws-align-content-stretch-start {
+.rg-align-content-stretch-start {
   @extend %justify-content-stretch;
   @extend %align-content-start;
 }
 
-.ws-align-content-stretch-space-between {
+.rg-align-content-stretch-space-between {
   @extend %justify-content-stretch;
   @extend %align-content-space-between;
 }
 
-.ws-align-content-stretch-center {
+.rg-align-content-stretch-center {
   @extend %justify-content-stretch;
   @extend %align-content-center;
 }
 
-.ws-align-content-stretch-space-around {
+.rg-align-content-stretch-space-around {
   @extend %justify-content-stretch;
   @extend %align-content-space-around;
 }
 
-.ws-align-content-stretch {
+.rg-align-content-stretch {
   @extend %justify-content-stretch;
   @extend %align-content-stretch;
 }
 
-.ws-align-content-stretch-end {
+.rg-align-content-stretch-end {
   @extend %justify-content-stretch;
   @extend %align-content-end;
 }
 
-.ws-align-content-space-around-start {
+.rg-align-content-space-around-start {
   @extend %justify-content-space-around;
   @extend %align-content-start;
 }
 
-.ws-align-content-space-around-space-between {
+.rg-align-content-space-around-space-between {
   @extend %justify-content-space-around;
   @extend %align-content-space-between;
 }
 
-.ws-align-content-space-around-center {
+.rg-align-content-space-around-center {
   @extend %justify-content-space-around;
   @extend %align-content-center;
 }
 
-.ws-align-content-space-around {
+.rg-align-content-space-around {
   @extend %justify-content-space-around;
   @extend %align-content-space-around;
 }
 
-.ws-align-content-space-around-stretch {
+.rg-align-content-space-around-stretch {
   @extend %justify-content-space-around;
   @extend %align-content-stretch;
 }
 
-.ws-align-content-space-around-end {
+.rg-align-content-space-around-end {
   @extend %justify-content-space-around;
   @extend %align-content-end;
 }
 
-.ws-align-content-end-start {
+.rg-align-content-end-start {
   @extend %justify-content-end;
   @extend %align-content-start;
 }
 
-.ws-align-content-end-space-between {
+.rg-align-content-end-space-between {
   @extend %justify-content-end;
   @extend %align-content-space-between;
 }
 
-.ws-align-content-end-center {
+.rg-align-content-end-center {
   @extend %justify-content-end;
   @extend %align-content-center;
 }
 
-.ws-align-content-end-space-around {
+.rg-align-content-end-space-around {
   @extend %justify-content-end;
   @extend %align-content-space-around;
 }
 
-.ws-align-content-end-stretch {
+.rg-align-content-end-stretch {
   @extend %justify-content-end;
   @extend %align-content-stretch;
 }
 
-.ws-align-content-end {
+.rg-align-content-end {
   @extend %justify-content-end;
   @extend %align-content-end;
 }
 
 // Flex element properties
 @for $i from 0 through 12 {
-  .ws-flex-grow-#{$i} {
+  .rg-flex-grow-#{$i} {
     flex-grow: #{$i};
   }
 
-  .ws-flex-shrink-#{$i} {
+  .rg-flex-shrink-#{$i} {
     flex-shrink: #{$i};
   }
 }
 
 // Self alignment
-.ws-align-self-start {
+.rg-align-self-start {
   align-self: flex-start;
 }
 
-.ws-align-self-baseline {
+.rg-align-self-baseline {
   align-self: baseline;
 }
 
-.ws-align-self-center {
+.rg-align-self-center {
   align-self: center;
 }
 
-.ws-align-self-stretch {
+.rg-align-self-stretch {
   align-self: stretch;
 }
 
-.ws-align-self-end {
+.rg-align-self-end {
   align-self: end;
 }

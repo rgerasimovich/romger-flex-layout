@@ -1,35 +1,35 @@
 const DIRECTION = {
     row: {
         value: 'row',
-        class: 'ws-layout-row'
+        class: 'rg-layout-row'
     },
     rowWrap: {
         value: 'rowWrap',
-        class: 'ws-layout-row-wrap'
+        class: 'rg-layout-row-wrap'
     },
     rowRev: {
         value: 'rowRev',
-        class: 'ws-layout-row-reverse'
+        class: 'rg-layout-row-reverse'
     },
     rowWrapRev: {
         value: 'rowWrapRev',
-        class: 'ws-layout-row-wrap-reverse'
+        class: 'rg-layout-row-wrap-reverse'
     },
     column: {
         value: 'column',
-        class: 'ws-layout-column'
+        class: 'rg-layout-column'
     },
     columnWrap: {
         value: 'columnWrap',
-        class: 'ws-layout-column-wrap'
+        class: 'rg-layout-column-wrap'
     },
     columnRev: {
         value: 'columnRev',
-        class: 'ws-layout-column-reverse'
+        class: 'rg-layout-column-reverse'
     },
     columnWrapRev: {
         value: 'columnWrapRev',
-        class: 'ws-layout-column-wrap-reverse'
+        class: 'rg-layout-column-wrap-reverse'
     }
 };
 
